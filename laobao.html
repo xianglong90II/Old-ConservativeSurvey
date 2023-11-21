@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老保态度量表</title>
+    <style>
+        #finalscore{
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            border: orange dotted 3px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>老保态度量表</h1>
+<div id="finalscore">请先答题并提交</div>
+<form>
+    
+    <fieldset>
+        <legend>请回答以下问题：</legend>
+
+        <label for="question1">1. 对现代价值观持何态度？</label>
+        <input type="radio" name="question1" value="conservative"> 保守
+        <input type="radio" name="question1" value="open-minded"> 开明
+
+        <br>
+
+        <label for="question2">2. 对新思想是否开放？</label>
+        <input type="radio" name="question2" value="resistant"> 抵制
+        <input type="radio" name="question2" value="accepting"> 接受
+
+        <br>
+
+        <label for="question3">3. 是否强调个人权威感？</label>
+        <input type="radio" name="question3" value="strongly"> 非常强烈
+        <input type="radio" name="question3" value="moderately"> 适度
+        <input type="radio" name="question3" value="not-important"> 不重要
+
+        <br>
+
+        <label for="education-question">4. 对于传统教育方式的看法：</label>
+        <select id="education-question" name="education-question">
+            <option value="support">支持，认为传统教育更有效</option>
+            <option value="neutral">中立，认为传统和现代教育各有优势</option>
+            <option value="oppose">反对，认为需要更新和改革教育体系</option>
+        </select>
+
+        <br>
+
+        <label for="technology-question">5. 对科技在教育中的应用持何态度：</label>
+        <input type="radio" name="technology-question" value="positive"> 积极支持
+        <input type="radio" name="technology-question" value="neutral"> 持中立态度
+        <input type="radio" name="technology-question" value="negative"> 持反对态度
+
+        <br>
+        <label for="education-traditional">6. 传统教育方式对社会的作用：</label>
+        <select id="education-traditional" name="education-traditional">
+            <option value="important">非常重要，传统教育是社会稳定的关键</option>
+            <option value="moderate">适度重要，传统教育有一定作用</option>
+            <option value="not-important">不重要，需要更现代化的教育方式</option>
+        </select>
+
+        <br>
+
+        <label for="education-authority">7. 在教育中是否强调权威性：</label>
+        <input type="radio" name="education-authority" value="strongly"> 非常强调
+        <input type="radio" name="education-authority" value="moderately"> 适度强调
+        <input type="radio" name="education-authority" value="not-important"> 不强调
+
+        <br>
+
+        <label for="education-innovation">8. 对于教育创新的态度：</label>
+        <input type="radio" name="education-innovation" value="support"> 积极支持，认为创新是教育的未来
+        <input type="radio" name="education-innovation" value="neutral"> 持中立态度，认为需谨慎尝试
+        <input type="radio" name="education-innovation" value="oppose"> 反对，认为传统教育方式更为可靠
+
+        <br>
+        <label for="family-tradition">9. 家庭传统对于你的重要性：</label>
+        <select id="family-tradition" name="family-tradition">
+            <option value="very-important">非常重要，家庭传统是价值观的基石</option>
+            <option value="moderately-important">适度重要，尊重但不教条</option>
+            <option value="not-important">不重要，个体自由比传统更重要</option>
+        </select>
+
+        <br>
+
+        <label for="family-authority">10. 家庭中是否强调权威关系：</label>
+        <input type="radio" name="family-authority" value="strongly"> 非常强调
+        <input type="radio" name="family-authority" value="moderately"> 适度强调
+        <input type="radio" name="family-authority" value="not-important"> 不强调
+
+        <br>
+
+        <label for="family-change">11. 对家庭结构和角色的变革持何态度：</label>
+        <input type="radio" name="family-change" value="resistant"> 抵制，认为传统结构更稳定
+        <input type="radio" name="family-change" value="accepting"> 接受，支持变革和多样性
+        <input type="radio" name="family-change" value="neutral"> 持中立态度，视具体情况而定
+
+        <br>
+        <label for="child-tradition">12. 你希望孩子继承和传承家庭传统吗？</label>
+        <input type="radio" name="child-tradition" value="yes"> 是的，我希望他们保持家庭传统
+        <input type="radio" name="child-tradition" value="no"> 不，我希望他们追求自己的道路
+        <input type="radio" name="child-tradition" value="depends"> 取决于情况，我希望他们有选择的权利
+
+        <br>
+
+        <label for="child-profession">13. 对于孩子职业的选择，你更倾向于：</label>
+        <input type="radio" name="child-profession" value="traditional"> 传统职业，如医生、教师等
+        <input type="radio" name="child-profession" value="modern"> 现代职业，如科技、艺术等
+        <input type="radio" name="child-profession" value="free-choice"> 自由选择，我支持他们追随自己的兴趣
+
+        <br>
+
+        <label for="child-marriage">14. 对于孩子的婚姻选择，你持何态度：</label>
+        <input type="radio" name="child-marriage" value="traditional"> 支持传统婚姻观念
+        <input type="radio" name="child-marriage" value="modern"> 支持现代婚姻观念，如自由恋爱
+        <input type="radio" name="child-marriage" value="neutral"> 持中立态度，尊重孩子的选择
+
+        <br>
+        <label for="filial-piety">15. 对于孝道的重要性：</label>
+        <select id="filial-piety" name="filial-piety">
+            <option value="very-important">非常重要，认为孝道是家庭核心价值</option>
+            <option value="moderately-important">适度重要，尊重但不强制</option>
+            <option value="not-important">不重要，个体自由比孝道更重要</option>
+        </select>
+
+        <br>
+
+        <label for="family-roles">16. 在家庭中是否强调传统的家庭角色：</label>
+        <input type="radio" name="family-roles" value="strongly"> 非常强调，认为家庭成员有明确的角色分工
+        <input type="radio" name="family-roles" value="moderately"> 适度强调，尊重传统角色但可灵活调整
+        <input type="radio" name="family-roles" value="not-important"> 不强调，认为家庭角色应该更加平等和灵活
+
+        <br>
+
+        <label for="intergenerational-living">17. 对跨代同堂生活的态度：</label>
+        <input type="radio" name="intergenerational-living" value="support"> 支持，认为有助于传承价值观和孝道
+        <input type="radio" name="intergenerational-living" value="neutral"> 持中立态度，取决于具体情况
+        <input type="radio" name="intergenerational-living" value="oppose"> 反对，认为独立居住更有利于个体发展
+
+        <br>
+        <label for="eating-manners">18. 当孩子吃饭时比长辈先动筷，你会怎么做？</label>
+        <select id="eating-manners" name="eating-manners">
+            <option value="correct">纠正孩子的行为，教导正确的餐桌礼仪</option>
+            <option value="ignore">不在意，认为孩子可能是出于好奇或无意识</option>
+            <option value="discuss-later">在饭后跟孩子讨论，解释为什么应该尊重长辈</option>
+            <option value="join-them">与孩子一起动筷，强调平等和互相尊重</option>
+        </select>
+
+        <br>
+
+        <label for="helping-elderly">19. 当长辈需要帮助时，你的反应是：</label>
+        <select id="helping-elderly" name="helping-elderly">
+            <option value="immediately-help">立即提供帮助，尽力满足长辈需求</option>
+            <option value="ask-for-details">询问具体需要，并根据情况决定是否帮助</option>
+            <option value="suggest-alternative">提出其他解决方案，鼓励长辈独立完成</option>
+            <option value="busy-ignore">因为忙碌而忽略，期待长辈自己解决</option>
+        </select>
+
+        <br>
+        <label for="intergenerational-values">20. 在家庭中，你更注重传承的是：</label>
+        <input type="radio" name="intergenerational-values" value="traditions"> 传统价值观和文化传承
+        <input type="radio" name="intergenerational-values" value="individual-values"> 个体独立和个性发展
+        <input type="radio" name="intergenerational-values" value="balance"> 平衡，重视传统同时尊重个体价值观
+
+        <br>
+        <label for="family-celebrations">21. 在家庭庆祝活动中，你更倾向于：</label>
+        <input type="radio" name="family-celebrations" value="traditional"> 传统方式，强调家族团聚和传统仪式
+        <input type="radio" name="family-celebrations" value="modern"> 现代方式，注重个性化和创新
+        <input type="radio" name="family-celebrations" value="combination"> 结合传统和现代元素，创造独特体验
+
+        <br>
+
+        <label for="communication-style">22. 在家庭沟通中，你更倾向于：</label>
+        <input type="radio" name="communication-style" value="respectful"> 尊重长辈，保持正式和尊敬的沟通方式
+        <input type="radio" name="communication-style" value="casual"> 更为随意和亲近的沟通风格，追求平等
+        <input type="radio" name="communication-style" value="adaptive"> 根据情境调整沟通方式，灵活应对
+
+        <br>
+
+
+        <label for="family-finances">23. 家庭财务决策中，你更倾向于：</label>
+        <input type="radio" name="family-finances" value="traditional"> 遵循传统方式，由长辈或家长负责决策
+        <input type="radio" name="family-finances" value="collaborative"> 与家庭成员协商决策，追求共识
+        <input type="radio" name="family-finances" value="independent"> 独立决策，强调个体财务独立性
+
+        <br>
+
+        <label for="cultural-celebrations">24. 在文化庆典中，你更愿意：</label>
+        <input type="radio" name="cultural-celebrations" value="participate-traditional"> 参与传统庆典，弘扬文化传统
+        <input type="radio" name="cultural-celebrations" value="explore-modern"> 探索现代活动，注重新文化体验
+        <input type="radio" name="cultural-celebrations" value="blend-traditional-modern"> 融合传统和现代元素，创造独特庆典
+
+        <br>
+
+        <label for="financial-support">25. 在家庭中，你对经济赡养的看法是：</label>
+        <input type="radio" name="financial-support" value="traditional-provider"> 传统提供者，认为男性应主要负责经济责任
+        <input type="radio" name="financial-support" value="shared-provider"> 共同提供，主张男女共同分担家庭经济责任
+        <input type="radio" name="financial-support" value="independent-provider"> 独立提供，主张每个家庭成员独立负责自己的经济需求
+
+        <br>
+
+
+        <label for="elderly-care">26. 当家中有年迈长辈需要照顾时，你更倾向于：</label>
+        <input type="radio" name="elderly-care" value="family-care"> 由家庭成员共同照顾，强调亲情和家庭责任
+        <input type="radio" name="elderly-care" value="professional-care"> 聘请专业护理人员，追求更专业的照顾服务
+        <input type="radio" name="elderly-care" value="government-assistance"> 寻求政府支持和福利，减轻家庭负担
+
+        <br>
+
+
+        <label for="financial-independence">27. 对子女的经济独立，你持何态度：</label>
+        <input type="radio" name="financial-independence" value="encourage"> 鼓励子女尽早实现经济独立，培养独立能力
+        <input type="radio" name="financial-independence" value="support"> 支持子女，即使成年后也提供财务帮助
+        <input type="radio" name="financial-independence" value="self-reliance"> 强调子女的自立自强，不提供财务支持
+        <input type="radio" name="financial-independence" value="against"> 反对，子女和父母的经济应该共享
+
+        <br>
+        <h2>性别认同的客观性</h2>
+
+        <label for="question28">你认为性别认同应该由个人来决定，还是应该由他人来判断？</label>
+        <input type="radio" name="question28" value="个人来决定"> 个人来决定
+        <input type="radio" name="question28" value="他人来判断"> 他人来判断
+      
+        <label for="question29">你认为性别认同可以通过外表来判断吗？</label>
+        <input type="radio" name="question29" value="可以"> 可以
+        <input type="radio" name="question29" value="不可以"> 不可以
+      
+        <label for="question30">你认为性别认同是可以改变的吗？</label>
+        <input type="radio" name="question30" value="可以"> 可以
+        <input type="radio" name="question30" value="不可以"> 不可以
+      
+        <h2>身体隐私的权利</h2>
+      
+        <label for="question31">你认为“让别人看见自己的身体”这件事是应该羞耻的吗？</label>
+        <input type="radio" name="question31" value="是"> 是
+        <input type="radio" name="question31" value="不是"> 不不是
+      
+        <label for="question32">你认为一个人有权利选择自己的性取向吗？</label>
+        <input type="radio" name="question32" value="有"> 有
+        <input type="radio" name="question32" value="没有"> 没有
+      
+        <label for="question33">你认为一个人有权利选择自己的性别表达吗？</label>
+        <input type="radio" name="question33" value="有"> 有
+        <input type="radio" name="question33" value="没有"> 没有
+      
+        <h2>性别多元化的认可</h2>
+      
+        <label for="question34">你是否赞成人类不应该只有两种性别？</label>
+        <input type="radio" name="question34" value="赞成"> 赞成
+        <input type="radio" name="question34" value="不赞成"> 不赞成
+      
+        <label for="question35">你认为性别认同是多种多样的吗？</label>
+        <input type="radio" name="question35" value="是"> 是
+        <input type="radio" name="question35" value="不是"> 不是
+      
+        <label for="question36">你认为性别认同是可以被理解的吗？</label>
+        <input type="radio" name="question36" value="可以"> 可以
+        <input type="radio" name="question36" value="不可以"> 不可以
+    </fieldset>
+
+    <br>
+
+    <input type="button" value="Calculate Score" onclick="calculateScore()">
+
+</form>
+
+</body>
+<script>
+function calculateScore() {
+        // Define the scoring system for each question
+        const scoring = {
+
+            "question1": {"conservative": 2, "open-minded": 0},
+            "question2": {"resistant": 2, "accepting": 0},
+            "question3": {"strongly": 2, "moderately": 1, "not-important": 0},
+            "education-question": {"support": 2, "neutral": 1, "oppose": 0},
+            "technology-question": {"positive": 0, "neutral": 1, "negative": 2},
+            "education-traditional": {"important": 2, "moderate": 1, "not-important": 0},
+            "education-authority": {"strongly": 2, "moderately": 1, "not-important": 0},
+            "education-innovation": {"support": 0, "neutral": 1, "oppose": 2},
+            "family-tradition": {"very-important": 2, "moderately-important": 1, "not-important": 0},
+            "family-authority": {"strongly": 2, "moderately": 1, "not-important": 0},
+            "family-change": {"resistant": 2, "accepting": 0, "neutral": 1},
+            "child-tradition": {"yes": 2, "no": 0, "depends": 1},
+            "child-profession": {"traditional": 2, "modern": 1, "free-choice": 0},
+            "child-marriage": {"traditional": 2, "modern": 2, "neutral": 1},
+            "filial-piety": {"very-important": 2, "moderately-important": 1, "not-important": 0},
+            "family-roles": {"strongly": 2, "moderately": 1, "not-important": 0},
+            "intergenerational-living": {"support": 2, "neutral": 1, "oppose": 0},
+            "eating-manners": {"correct": 2, "ignore": 0, "discuss-later": 1, "join-them": 0},
+            "helping-elderly": {"immediately-help": 2, "ask-for-details": 1, "suggest-alternative": 1, "busy-ignore": 0},
+            "intergenerational-values": {"traditions": 2, "individual-values": 0, "balance": 1},
+            "family-celebrations": {"traditional": 2, "modern": 2, "combination": 1},
+            "communication-style": {"respectful": 2, "casual": 1, "adaptive": 1},
+            "family-finances": {"traditional": 2, "collaborative": 1, "independent": 0},
+            "cultural-celebrations": {"participate-traditional": 2, "explore-modern": 0, "blend-traditional-modern": 1},
+            "financial-support": {"traditional-provider": 2, "shared-provider": 1, "independent-provider": 0},
+            "elderly-care": {"family-care": 2, "professional-care": 1, "government-assistance": 0},
+            "financial-independence": {"encourage": 1, "support": 1, "self-reliance": 0, "against": 2},
+            "question28": {"个人来决定": 2, "他人来判断": 0},
+            "question29": {"可以": 2, "不可以": 0},
+            "question30": {"可以": 2, "不可以": 0},
+            "question31": {"是": 2, "不是": 0},
+            "question32": {"有": 2, "没有": 0},
+            "question33": {"有": 2, "没有": 0},
+            "question34": {"赞成": 2, "不赞成": 0},
+            "question35": {"是": 2, "不是": 0},
+            "question36": {"可以": 2, "不可以": 0}
+        };
+    
+        let totalScore = 0;
+    
+        for (const questionId in scoring) {
+            const selectedOption = document.querySelector(`input[name=${questionId}]:checked, select[name=${questionId}]`);
+            
+            if (selectedOption) {
+                const optionValue = selectedOption.value;
+                totalScore += scoring[questionId][optionValue];
+            }
+        }
+
+        const scoresDisplay = document.getElementById("finalscore");
+        scoresDisplay.innerHTML="满分72，最终得分是："+totalScore+"，老保程度"+totalScore/72*100+"%";
+    }
+    </script>
+</html>
