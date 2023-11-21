@@ -16,7 +16,7 @@
 <body>
 
 <h1>老保态度量表</h1>
-<div id="finalscore">请先答题并提交</div>
+
 <form>
     
     <fieldset>
@@ -219,52 +219,61 @@
         <input type="radio" name="financial-independence" value="against"> 反对，子女和父母的经济应该共享
 
         <br>
-        <h2>性别认同的客观性</h2>
+        性别认同的客观性
 
         <label for="question28">你认为性别认同应该由个人来决定，还是应该由他人来判断？</label>
         <input type="radio" name="question28" value="个人来决定"> 个人来决定
         <input type="radio" name="question28" value="他人来判断"> 他人来判断
+        <br>
       
         <label for="question29">你认为性别认同可以通过外表来判断吗？</label>
         <input type="radio" name="question29" value="可以"> 可以
         <input type="radio" name="question29" value="不可以"> 不可以
+        <br>
       
         <label for="question30">你认为性别认同是可以改变的吗？</label>
         <input type="radio" name="question30" value="可以"> 可以
         <input type="radio" name="question30" value="不可以"> 不可以
+        <br>
       
-        <h2>身体隐私的权利</h2>
+        身体隐私的权利
       
         <label for="question31">你认为“让别人看见自己的身体”这件事是应该羞耻的吗？</label>
         <input type="radio" name="question31" value="是"> 是
         <input type="radio" name="question31" value="不是"> 不不是
+        <br>
       
         <label for="question32">你认为一个人有权利选择自己的性取向吗？</label>
         <input type="radio" name="question32" value="有"> 有
         <input type="radio" name="question32" value="没有"> 没有
+        <br>
       
         <label for="question33">你认为一个人有权利选择自己的性别表达吗？</label>
         <input type="radio" name="question33" value="有"> 有
         <input type="radio" name="question33" value="没有"> 没有
+        <br>
       
-        <h2>性别多元化的认可</h2>
+        性别多元化的认可
       
         <label for="question34">你是否赞成人类不应该只有两种性别？</label>
         <input type="radio" name="question34" value="赞成"> 赞成
+        <input type="radio" name="question34" value="中立"> 中立
         <input type="radio" name="question34" value="不赞成"> 不赞成
-      
+        <br>
         <label for="question35">你认为性别认同是多种多样的吗？</label>
         <input type="radio" name="question35" value="是"> 是
         <input type="radio" name="question35" value="不是"> 不是
-      
+        <br>
         <label for="question36">你认为性别认同是可以被理解的吗？</label>
         <input type="radio" name="question36" value="可以"> 可以
+        <input type="radio" name="question36" value="看情况"> 看情况
         <input type="radio" name="question36" value="不可以"> 不可以
     </fieldset>
 
     <br>
 
-    <input type="button" value="Calculate Score" onclick="calculateScore()">
+    <input type="button" value="计算得分" onclick="calculateScore()">
+    <div id="finalscore">请先答题并提交</div>
 
 </form>
 
@@ -307,9 +316,9 @@ function calculateScore() {
             "question31": {"是": 2, "不是": 0},
             "question32": {"有": 2, "没有": 0},
             "question33": {"有": 2, "没有": 0},
-            "question34": {"赞成": 2, "不赞成": 0},
+            "question34": {"赞成": 2,"中立":1,"不赞成": 0},
             "question35": {"是": 2, "不是": 0},
-            "question36": {"可以": 2, "不可以": 0}
+            "question36": {"可以": 2, "看情况":1,"不可以": 0}
         };
     
         let totalScore = 0;
@@ -324,6 +333,7 @@ function calculateScore() {
         }
 
         const scoresDisplay = document.getElementById("finalscore");
+        alert("满分72，最终得分是："+totalScore+"，老保程度"+totalScore/72*100+"%");
         scoresDisplay.innerHTML="满分72，最终得分是："+totalScore+"，老保程度"+totalScore/72*100+"%";
     }
     </script>
