@@ -5,11 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>老保态度量表</title>
     <style>
+        body{
+            background-color: azure;
+        }
         #finalscore{
             text-align: center;
             color: black;
             font-size: 20px;
             border: orange dotted 3px;
+        }
+        input{
+            display: inline-block;
+        }
+        .submitblock{
+            text-align: center;
+        }
+        .submitblock .submit{
+            display: inline-block;
+            width: 200px;
+            height: 75px;
+            color: white;
+            background-color: rgb(89, 197, 131);
+            border: transparent 0px;
+            font-size: 30px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .submitblock .submit:hover{
+            background-color: rgb(69, 161, 126);
         }
     </style>
 </head>
@@ -220,6 +243,7 @@
 
         <br>
         性别认同的客观性
+        <br>
 
         <label for="question28">你认为性别认同应该由个人来决定，还是应该由他人来判断？</label>
         <input type="radio" name="question28" value="个人来决定"> 个人来决定
@@ -237,6 +261,7 @@
         <br>
       
         身体隐私的权利
+        <br>
       
         <label for="question31">你认为“让别人看见自己的身体”这件事是应该羞耻的吗？</label>
         <input type="radio" name="question31" value="是"> 是
@@ -271,8 +296,9 @@
     </fieldset>
 
     <br>
-
-    <input type="button" value="计算得分" onclick="calculateScore()">
+    <div class="submitblock">
+        <input class="submit" type="button" value="计算得分" onclick="calculateScore()">
+    </div>
     <div id="finalscore">请先答题并提交</div>
 
 </form>
